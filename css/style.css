@@ -1,0 +1,30 @@
+/* Simple responsive styles for SDRD School site */
+:root{
+  --accent:#2b6cb0;
+  --bg:#f7fafc;
+  --text:#1a202c;
+  --muted:#4a5568;
+  --container:1000px;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:var(--bg);color:var(--text);margin:0;line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #e2e8f0}
+.brand{margin:0;padding:1rem 0;font-size:1.25rem;color:var(--accent)}
+.nav{list-style:none;margin:0;padding:0;display:flex;gap:0.75rem}
+.nav a{display:block;padding:1rem;color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--accent)}
+.hero{background:linear-gradient(90deg, #ebf8ff 0%, #fff 100%);padding:2.25rem 0;border-bottom:1px solid #e6eef8}
+.hero .lead{font-size:1.125rem;color:var(--muted)}
+.section{padding:1.25rem 0}
+.site-footer{background:#fff;border-top:1px solid #e2e8f0;padding:1rem 0;margin-top:2rem}
+
+/* Responsive adjustments */
+@media (max-width:720px){
+  .nav{flex-wrap:wrap}
+  .brand{font-size:1rem}
+  .hero{padding:1.25rem 0}
+}
+
+/* Accessibility helpers */
+a:focus{outline:3px solid #cfeaff;outline-offset:2px}
